@@ -1,4 +1,4 @@
-# Cooking With Webpack, Part 1 - Introduction and Basic Implementation
+# Introduction and Basic Implementation
 
 I'll begin this article the way many a webpack article begins - with a simple, underwhelming, and slightly confusing description of what webpack is. From their docs:
 
