@@ -1,0 +1,14 @@
+{
+  "name": "cooking-with-webpack-1",
+  "version": "1.0.0",
+  "description": "Cooking with webpack - part 1",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Nick Salloum <nick@callmenick.com> (http://callmenick.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
+}
