@@ -165,4 +165,4 @@ If the above confuses you, then forget about it and don't dwell too much on it. 
 
 ## Wrap Up
 
-Here, we took a plunge into webpack, and skimmed the surface of its huge well of potential. We took a quick look at the webpack cli, and another look and implementation of the webpack configuration file. Then, we created our first bundle which was making use of CommonJS modules. Next up, you can check out [Part 2 - Understanding and Using Webpack Loaders](https://github.com/callmenick/cooking-with-webpack/tree/master/1-intro-basic-implementation)!
+Here, we took a plunge into webpack, and skimmed the surface of its huge well of potential. We took a quick look at the webpack cli, and another look and implementation of the webpack configuration file. Then, we created our first bundle which was making use of CommonJS modules. Next up, you can check out [Part 2 - Understanding and Using Webpack Loaders](https://github.com/callmenick/cooking-with-webpack/tree/master/2-using-loaders)!
