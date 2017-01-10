@@ -1,0 +1,22 @@
+{
+  "name": "cooking-with-webpack-1",
+  "version": "1.0.0",
+  "description": "Cooking with webpack - part 1",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Nick Salloum <nick@callmenick.com> (http://callmenick.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "handlebars": "^4.0.6",
+    "handlebars-loader": "^1.4.0",
+    "html-loader": "^0.4.4",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0"
+  }
+}
