@@ -14,19 +14,19 @@ Something that confused me up front as well was the endless commingling of the [
 
 First things first, let's get a project set up by running:
 
-```bash
+```console
 npm init
 ```
 
 Let's also create a very basic folder structure, and add an empty JavaScript file to it:
 
-```bash
+```console
 mkdir src && touch src/index.js
 ```
 
 Then, let's add webpack as a development dependency:
 
-```bash
+```console
 npm install webpack --save-dev
 ```
 
@@ -82,7 +82,7 @@ The above assumes that a webpack configuration file named `config.js` was found.
 
 And now, we can create our webpack configuration file:
 
-```bash
+```console
 touch webpack.config.js
 ```
 
@@ -114,7 +114,7 @@ At this point, we've quite literally taken an empty project, added webpack as a 
 
 First, let's create a new file called `hello.js`. This will be a module that we can use in `index.js`.
 
-```bash
+```console
 touch src/hello.js
 ```
 
@@ -143,7 +143,7 @@ console.log(hello('Nick')); // should log "Hello, Nick!"
 
 Now, if we run our build task again using `npm run build`, we'll get some neat output. We can also verify that our code is working by running it simply with node:
 
-```bash
+```console
 node ./dist/index.bundle.js
 
 output:

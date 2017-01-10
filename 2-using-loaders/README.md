@@ -48,7 +48,7 @@ A particular point of interest comes in the second loader configuration. We're a
 
 Let's imagine a scenario where we have a simple JavaScript application, and based on some user's interactions, we want to display some HTML template. For the sake of separating our concerns, we wanted our HTML to reside in its own file, and for us to some how be able to require it and bundle it in on demand. The [HTML loader ](https://github.com/webpack/html-loader) is the perfect tool for the job. Let's go ahead and install it:
 
-```bash
+```console
 npm install html-loader --save-dev
 ```
 
@@ -79,13 +79,13 @@ console.log(hello);
 
 Now, let's create our bundle by running:
 
-```bash
+```console
 npm run build
 ```
 
 Let's observe the `dist/index.bundle.js` file to see what happened during bundling. If we scroll down to the first module, we'll see that we're assigning the result of `__webpack_require__(1)` to the variable `hello`. Then, in the second module (which is at index 1 in the array), we can see that the loader applied the correct transformations to the HTML template, and converted it to a string with the necessary new line characters. Let's witness that first hand by running our bundle in node:
 
-```bash
+```console
 node dist/index.bundle.js
 
 output:
@@ -141,13 +141,13 @@ When working with styles, there are two loaders that need to be considered:
 
 Let's install both of them:
 
-```bash
+```console
 npm install style-loader css-loader --save-dev
 ```
 
 Now, let's create our first stylesheet:
 
-```bash
+```console
 touch src/style.css
 ```
 
@@ -203,7 +203,7 @@ module.exports = function() {
 
 We're going to need to create that `hello.css` file, so go ahead and do that:
 
-```bash
+```console
 touch src/hello.css
 ```
 
@@ -254,7 +254,7 @@ You're probably thinking that a lot of what we just did has nothing to do with w
 
 To prove this point a bit, let's work solely on our "hello" component. For it to be more template-like, let's use handlebars instead of just plain old HTML:
 
-```bash
+```console
 npm install handlebars handlebars-loader --save-dev
 cp src/hello.html src/hello.hbs
 ```
@@ -319,7 +319,7 @@ Build, refresh, and voila. Beautiful.
 
 To wrap this all up, I'm going to introduce to you one more loader that'll allow you to write next generation JavaScript using [babel](http://babeljs.io/). Babel is a JavaScript compiler that gives us a large configuration set. We'll keep it simple for now though. As with all other loaders, we need the [babel loader](https://github.com/babel/babel-loader), as well as some other dependencies based on their docs:
 
-```bash
+```console
 npm install babel-loader babel-core babel-preset-es2015 --save-dev
 ```
 
