@@ -1,6 +1,6 @@
 # Introduction and Basic Implementation
 
-I'll begin this article the way many a webpack article begins - with a simple, underwhelming, and slightly confusing description of what webpack is. From their docs:
+I'll begin here the way many a webpack tutorial begins - with a simple, underwhelming, and slightly confusing description of what webpack is. From their docs:
 
 > Webpack is a module bundler. Webpack takes modules with dependencies and generates static assets representing those modules.
 
@@ -165,4 +165,4 @@ If the above confuses you, then forget about it and don't dwell too much on it. 
 
 ## Wrap Up
 
-Here, we took a plunge into webpack, and skimmed the surface of its huge well of potential. We took a quick look at the webpack cli, and another look and implementation of the webpack configuration file. Then, we created our first bundle which was making use of CommonJS modules.
+Here, we took a plunge into webpack, and skimmed the surface of its huge well of potential. We took a quick look at the webpack cli, and another look and implementation of the webpack configuration file. Then, we created our first bundle which was making use of CommonJS modules. Next up, you can check out [Part 2 - Understanding and Using Webpack Loaders](https://github.com/callmenick/cooking-with-webpack/tree/master/1-intro-basic-implementation)!
