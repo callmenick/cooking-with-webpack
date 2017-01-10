@@ -1,4 +1,4 @@
-# Understanding and Using Webpack Loaders
+# Understanding & Using Webpack Loaders
 
 In [part 1](https://github.com/callmenick/cooking-with-webpack/tree/master/1-intro-basic-implementation), we plunged into webpack and gained a better understanding of what it is and some of its capabilities. We were able to write a script, require a module in it, and output a bundle using webpack. One really important takeaway from all of that was that we **bundled** up some **modules**. At this point, it's time to understand that a module can refer to many different things, not just a JavaScript file. Out of the box, webpack only supports JavaScript modules. But what if we wanted to bundle up some CSS in our output file? What if we wanted to grab some HTML templates from HTML files for usage in our script? Enter loaders.
 
