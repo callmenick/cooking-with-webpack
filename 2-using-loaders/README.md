@@ -145,7 +145,16 @@ Let's install both of them:
 npm install style-loader css-loader --save-dev
 ```
 
-Now, let's create our first stylesheet:
+Now, let's configure webpack to use the loaders:
+
+```javascript
+{
+  test: /\.css$/,
+  loaders: ['style', 'css']
+}
+```
+
+This time, we used an array of loaders. Webpack allows us to chain loaders by adding multiple loaders to an array with key `loaders`, instead of just the one `loader`. Next up, let's create our first stylesheet:
 
 ```console
 touch src/style.css
