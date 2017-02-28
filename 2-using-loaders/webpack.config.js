@@ -8,27 +8,32 @@ module.exports = {
     filename: 'index.bundle.js'
   },
   module: {
-    loaders: [
-      {
-        test: /\.html$/,
-        loader: 'html'
-      },
-      {
-        test: /\.hbs$/,
-        loader: 'handlebars'
-      },
-      {
-        test: /\.css$/,
-        loaders: ['style', 'css']
-      },
-      {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
+    rules: [{
+      test: /\.html$/,
+      use: [{
+        loader: 'html-loader'
+      }]
+    }, {
+      test: /\.hbs$/,
+      use: [{
+        loader: 'handlebars-loader'
+      }]
+    }, {
+      test: /\.css$/,
+      use: [{
+        loader: 'style-loader'
+      }, {
+        loader: 'css-loader'
+      }]
+    }, {
+      test: /\.js$/,
+      exclude: /(node_modules)/,
+      use: [{
         loader: 'babel-loader',
         query: {
           presets: ['es2015']
         }
-      }
-    ]
+      }]
+    }]
   }
 };
