@@ -12,7 +12,7 @@ In other words, by using a loader, we can tell webpack to apply *transformations
 
 ## Syntax of a Loader Configuration
 
-In our configuration file, we need a new key called `module`. This is where we will place all our loaders, which are stored as an array with key `loaders`. We'll be building upon our work in part 1, so go ahead and copy over the files. For quick reference, our file should now look like this:
+In our configuration file, we need a new key called `module`. Each `module` can have `rules`, and inside each `rule`, we can configure what loaders we'd like to `use`. We'll be building upon our work in part 1, so go ahead and copy over the files. For quick reference, our file should now look like this:
 
 ```javascript
 module.exports = {
@@ -22,22 +22,28 @@ module.exports = {
     filename: 'index.bundle.js'
   },
   module: {
-    loaders: []
+    rules: []
   }
 };
 ```
 
-In the most basic sense, each loader is represented as an object with a RegEx test followed by a string or array of loaders to apply. For example:
+In the most basic sense, each loader is represented as an object with a RegEx `test`, and an array of [UseEntries](https://webpack.js.org/configuration/module/#useentry). Each UseEntry may contain a loader. For example:
 
 ```javascript
 loaders: [
   {
     test: /\.extension$/,
-    loader: 'some-loader'
+    use: [{
+      loader: 'some-loader'
+    }]
   },
   {
     test: /\.differentextension$/,
-    loaders: ['some-loader', 'another-loader']
+    use: [{
+      loader: 'some-loader'
+    }, {
+      loader: 'another-loader'
+    }]
   }
 ]
 ```
@@ -46,7 +52,7 @@ A particular point of interest comes in the second loader configuration. We're a
 
 ## Basic Templates with the HTML Loader
 
-Let's imagine a scenario where we have a simple JavaScript application, and based on some user's interactions, we want to display some HTML template. For the sake of separating our concerns, we wanted our HTML to reside in its own file, and for us to some how be able to require it and bundle it in on demand. The [HTML loader ](https://github.com/webpack/html-loader) is the perfect tool for the job. Let's go ahead and install it:
+Let's imagine a scenario where we have a simple JavaScript application, and based on some user's interactions, we want to display some HTML template. For the sake of separating our concerns, we wanted our HTML to reside in its own file, and for us to some how be able to require it and bundle it in on demand. The [HTML loader](https://github.com/webpack/html-loader) is the perfect tool for the job. Let's go ahead and install it:
 
 ```console
 npm install html-loader --save-dev
@@ -57,7 +63,9 @@ Now over in our webpack configuration, let's add the loader:
 ```javascript
 {
   test: /\.html$/,
-  loader: 'html'
+  use: [{
+    loader: 'html-loader'
+  }]
 }
 ```
 
@@ -150,7 +158,11 @@ Now, let's configure webpack to use the loaders:
 ```javascript
 {
   test: /\.css$/,
-  loaders: ['style', 'css']
+  use: [{
+    loader: 'style-loader'
+  }, {
+    loader: 'css-loader'
+  }]
 }
 ```
 
@@ -273,7 +285,9 @@ In our webpack config, let's enable handlebars transformations:
 ```javascript
 {
   test: /\.hbs$/,
-  loader: 'handlebars'
+  use: [{
+    loader: 'handlebars-loader'
+  }]
 }
 ```
 
@@ -337,11 +351,13 @@ The `babel-loader` package is required for the actual loading in webpack, the `b
 ```javascript
 {
   test: /\.js$/,
-  exclude: /node_modules/,
-  loader: 'babel-loader',
-  query: {
-    presets: ['es2015']
-  }
+  exclude: /(node_modules)/,
+  use: [{
+    loader: 'babel-loader',
+    query: {
+      presets: ['es2015']
+    }
+  }]
 }
 ```
 
