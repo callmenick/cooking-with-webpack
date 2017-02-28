@@ -4,11 +4,11 @@ In [part 1](https://github.com/callmenick/cooking-with-webpack/tree/master/1-int
 
 ## What is a Loader?
 
-[According to the docs:](http://webpack.github.io/docs/using-loaders.html)
+[According to the docs:](https://webpack.js.org/loaders/)
 
-> Loaders are transformations that are applied on a resource file of your app. They are functions (running in node.js) that take the source of a resource file as the parameter and return the new source.
+> Webpack enables use of loaders to preprocess files. This allows you to bundle any static resource way beyond JavaScript.
 
-In other words, by using a loader, we can tell webpack to apply *transformations* to certain file types, and load it into the output. For example, if we used a CSS loader, we could require a CSS file in any of our JavaScript files. Then, webpack would step in, transform it to parsable JavaScript, and spit out the bundle. Webpack has a [ton of loaders](https://webpack.github.io/docs/list-of-loaders.html) ready for you to use. Let's take a look at some of them by implementing them and observing the output.
+In other words, by using a loader, we can tell webpack to apply *transformations* to certain file types, and load it into the output. For example, if we used a CSS loader, we could require a CSS file in any of our JavaScript files. Then, webpack would step in, transform it to parsable JavaScript, and spit out the bundle. Webpack has a [ton of loaders](https://webpack.js.org/loaders/) ready for you to use. Let's take a look at some of them by implementing them and observing the output.
 
 ## Syntax of a Loader Configuration
 

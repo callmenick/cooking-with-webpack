@@ -1,14 +1,14 @@
 # Introduction and Basic Implementation
 
-I'll begin here the way many a webpack tutorial begins - with a simple, underwhelming, and slightly confusing description of what webpack is. From their docs:
+I'll begin here the way many a [webpack](https://webpack.js.org/) tutorial begins - with a simple, underwhelming, and slightly confusing description of what webpack is. From their docs:
 
-> Webpack is a module bundler. Webpack takes modules with dependencies and generates static assets representing those modules.
+> webpack is a module bundler for modern JavaScript applications.
 
 In this series of tutorials though, I promise to take you way beyond the basics, and into some of the more intricate parts of webpack.
 
 In a most basic sense, webpack looks at a source file, examines its dependencies, and compiles an output bundle. So if our source file requires another modules (CommonJS of AMD), webpack will do some stuff under the hood in the build and bundle in that module, producing a file that's ready for consumption in any JavaScript environment.
 
-Something that confused me up front as well was the endless commingling of the [command line interface](http://webpack.github.io/docs/cli.html) as well as the [configuration file](http://webpack.github.io/docs/configuration.html). When webpack runs, it looks for both of these things, and often times, a lot of command line clunkiness can be moved into the webpack configuration file. In these guides, I'll be primarily using the configuration file with occasional command line arguments.
+Something that confused me up front as well was the endless commingling of the [command line interface](https://webpack.js.org/api/cli/) as well as the [configuration file](https://webpack.js.org/configuration/). When webpack runs, it looks for both of these things, and often times, a lot of command line clunkiness can be moved into the webpack configuration file. In these guides, I'll be primarily using the configuration file with occasional command line arguments.
 
 ## Setting Up Our Project
 
